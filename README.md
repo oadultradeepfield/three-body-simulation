@@ -1,5 +1,7 @@
 # Three-Body Simulation
 
+💡 _**Future Plan**: Generalize the program for N bodies with a support for spherical coordinates._
+
 A C++ program simulating the motion of three objects under mutual gravitational attraction using Newton's law of gravitation, $F = GMm/r^2$. The simulation approximates the ODE solution with the fourth-order Runge-Kutta method (RK4) to update positions and velocities. Visualization is done using Python's Matplotlib for 3D trajectories and XY projections.
 
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=C%2B%2B&logoColor=white)](https://isocpp.org/)
