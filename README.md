@@ -33,7 +33,7 @@ A C++ program simulating the motion of three objects under mutual gravitational 
 
 1. Configure the simulation by editing `config.txt` and `bodies.txt`:
 
-   - **config.txt**
+   - `config.txt`
 
      ```bash
      G=1
@@ -42,7 +42,7 @@ A C++ program simulating the motion of three objects under mutual gravitational 
      filename=results/example_02_eight_shaped_orbit.txt
      ```
 
-   - **bodies.txt**
+   - `bodies.txt`
 
      ```bash
      # Body 1
@@ -75,6 +75,6 @@ A C++ program simulating the motion of three objects under mutual gravitational 
 
 The output plot will be saved in the same directory as the `.txt` file.
 
-|                            **Example 3D Trajectory**                            |                             **Example 2D Projection**                              |
+|                            **Example 3D Trajectory**                            |                             **Example XY Projection**                              |
 | :-----------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
 | ![Example 3D Trajectory](/results/example_02_eight_shaped_orbit_trajectory.png) | ![Example 2D Projection](/results/example_02_eight_shaped_orbit_2d_projection.png) |
