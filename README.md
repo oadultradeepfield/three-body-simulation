@@ -2,6 +2,9 @@
 
 A C++ program simulating the motion of three objects under mutual gravitational attraction using Newton's law of gravitation, $F = GMm/r^2$. The simulation approximates the ODE solution with the fourth-order Runge-Kutta method (RK4) to update positions and velocities. Visualization is done using Python's Matplotlib for 3D trajectories and XY projections.
 
+[![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=C%2B%2B&logoColor=white)](https://isocpp.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white)](https://www.python.org/)
+
 ## Installation
 
 1. Clone the repository and navigate to the project directory:
@@ -71,3 +74,7 @@ A C++ program simulating the motion of three objects under mutual gravitational 
    ```
 
 The output plot will be saved in the same directory as the `.txt` file.
+
+|                            **Example 3D Trajectory**                            |                             **Example 2D Projection**                              |
+| :-----------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| ![Example 3D Trajectory](/results/example_02_eight_shaped_orbit_trajectory.png) | ![Example 2D Projection](/results/example_02_eight_shaped_orbit_2d_projection.png) |
