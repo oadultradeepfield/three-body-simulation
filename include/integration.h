@@ -4,6 +4,6 @@
 #include <vector>
 #include "bodies.h"
 
-void runge_kutta_step(std::vector<Body> &bodies, double dt);
+void runge_kutta_step(std::vector<Body> &bodies, double dt, double G);
 
 #endif

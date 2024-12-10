@@ -1,0 +1,4 @@
+G=1
+dt=0.0005
+total_time=50
+filename=results/example_02_eight_shaped_orbit.txt

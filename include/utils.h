@@ -5,6 +5,6 @@
 #include <string>
 #include "bodies.h"
 
-void print_state(const std::vector<Body>& bodies, const std::string& filename);
+void print_state(const std::vector<Body> &bodies, const std::string &filename);
 
 #endif

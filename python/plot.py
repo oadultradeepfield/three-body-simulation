@@ -35,17 +35,22 @@ def plot_trajectory(all_positions, labels, output_path):
     fig = plt.figure(figsize=(12, 8))
     ax = fig.add_subplot(111, projection="3d")
 
-    colors = plt.cm.Set1.colors
+    colors = plt.cm.tab20.colors
     for i, positions in enumerate(all_positions):
         x, y, z = positions[:, 0], positions[:, 1], positions[:, 2]
-        ax.scatter(x, y, z, label=labels[i], color=colors[i % len(colors)], s=20)
+        ax.plot(x, y, z, color=colors[i % len(colors)], alpha=0.8, linewidth=2)
+        ax.scatter(
+            x[-1], y[-1], z[-1], color=colors[i % len(colors)], s=100, label=labels[i]
+        )
 
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
-    ax.set_zlabel("Z")
-    ax.legend(loc="center left", bbox_to_anchor=(1.1, 0.5))
-    plt.title("3D Trajectories")
-    plt.savefig(output_path, bbox_inches="tight")
+    ax.set_xlabel("X", labelpad=15)
+    ax.set_ylabel("Y", labelpad=15)
+    ax.set_zlabel("Z", labelpad=15)
+    ax.tick_params(axis="both", which="major", labelsize=10)
+    ax.grid(True, linestyle="--", alpha=0.6)
+    ax.legend(loc="center left", bbox_to_anchor=(1.1, 0.5), fontsize=10)
+    plt.title("3D Trajectories", fontsize=16, pad=20)
+    plt.savefig(output_path, bbox_inches="tight", dpi=300)
     plt.close(fig)
 
 
@@ -54,18 +59,21 @@ def plot_2d_projection(all_positions, labels, output_path):
         print("Error: No positions to plot.")
         return
 
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(8, 8))
 
-    colors = plt.cm.Set1.colors
+    colors = plt.cm.tab20.colors
     for i, positions in enumerate(all_positions):
         x, y = positions[:, 0], positions[:, 1]
-        plt.scatter(x, y, label=labels[i], color=colors[i % len(colors)], s=20)
+        plt.plot(x, y, color=colors[i % len(colors)], alpha=0.8, linewidth=2)
+        plt.scatter(x[-1], y[-1], color=colors[i % len(colors)], s=100, label=labels[i])
 
-    plt.xlabel("X")
-    plt.ylabel("Y")
-    plt.title("2D Projections (X vs Y)")
-    plt.legend(loc="center left", bbox_to_anchor=(1.1, 0.5))
-    plt.savefig(output_path, bbox_inches="tight")
+    plt.xlabel("X", fontsize=12, labelpad=10)
+    plt.ylabel("Y", fontsize=12, labelpad=10)
+    plt.title("2D Projections (X vs Y)", fontsize=14, pad=15)
+    plt.axis("equal")
+    plt.grid(True, linestyle="--", alpha=0.6)
+    plt.legend(loc="center left", bbox_to_anchor=(1.1, 0.5), fontsize=10)
+    plt.savefig(output_path, bbox_inches="tight", dpi=300)
     plt.close()
 
 
